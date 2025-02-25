@@ -3,8 +3,8 @@ import threading
 import dearpygui.dearpygui as dpg
 from Pandora import search_in_docx
 
-# Hardcoded folder path
-FOLDER_PATH = r"C:\\Users\\HP\\Desktop\\The guardians of Pandora"
+# ✅ Updated Folder Path
+FOLDER_PATH = r"C:\Users\HP\Desktop\Others\Keyword Searcher\KeyWord_Searcher\The guardians of Pandora"
 
 suggested_words = []
 
@@ -56,11 +56,11 @@ def build_ui():
         dpg.add_input_text(label="Enter text to search:", tag="SearchText", width=400)
         dpg.add_button(label="Start Search", callback=start_search)
 
-        dpg.add_spacing(count=2)
+        dpg.add_spacer()
         dpg.add_progress_bar(tag="ProgressCircle", overlay="Progress", default_value=0.0, width=300)
         dpg.add_text("0/0 files scanned", tag="ProgressText")
 
-        dpg.add_spacing(count=2)
+        dpg.add_spacer()
         dpg.add_separator()
         dpg.add_text("Search Results:", color=[255, 204, 0])
         with dpg.child_window(tag="ResultsChild", width=780, height=300, border=True):
