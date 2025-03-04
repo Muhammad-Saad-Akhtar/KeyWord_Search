@@ -1,8 +1,9 @@
 import os
 from docx import Document
-from docx.shared import RGBColor
+from docx.shared import RGBColor # Fot higlighting of text
 from tqdm import tqdm  # For progress bar
 
+# ----------------- Search Function ----------------- #
 def search_in_docx(folder_path, search_text, exclude_words=[], progress_callback=None):
     """
     Searches for text in .docx files within a given folder.
@@ -46,7 +47,7 @@ def search_in_docx(folder_path, search_text, exclude_words=[], progress_callback
 
     return results
 
-
+# ----------------- Highlight Function ----------------- #
 def highlight_and_save_results(results, search_text):
     """
     Highlights the found search text in the document and saves it as a new file.
